@@ -1,0 +1,20 @@
+.footer {
+    padding: 40px 0;
+    border-top: 1px solid var(--border-color);
+    z-index: 1;
+    position: relative;
+}
+
+.content {
+    text-align: center;
+}
+
+.content p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+}
+
+.year {
+    margin-top: 6px;
+    font-size: 0.8rem !important;
+}

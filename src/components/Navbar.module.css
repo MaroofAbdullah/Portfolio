@@ -1,0 +1,146 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 20px 0;
+    transition: var(--transition);
+}
+
+.scrolled {
+    padding: 12px 0;
+    background: rgba(10, 10, 15, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: var(--font-mono);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.5px;
+    text-decoration: none;
+}
+
+.bracket {
+    color: var(--accent-1);
+}
+
+.links {
+    display: flex;
+    list-style: none;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+}
+
+.link {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.link:hover {
+    color: var(--text-primary);
+    background: var(--bg-glass);
+}
+
+.cta {
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 10px 24px;
+    border-radius: 10px;
+    background: var(--gradient-primary);
+    color: white;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(108, 92, 231, 0.3);
+}
+
+.toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.toggle span {
+    width: 24px;
+    height: 2px;
+    background: var(--text-primary);
+    border-radius: 2px;
+    transition: var(--transition);
+    display: block;
+}
+
+.toggleActive span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.toggleActive span:nth-child(2) {
+    opacity: 0;
+}
+
+.toggleActive span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media (max-width: 768px) {
+
+    .links,
+    .cta {
+        display: none;
+    }
+
+    .toggle {
+        display: flex;
+    }
+
+    .links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(10, 10, 15, 0.98);
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+        padding: 40px 20px;
+        border-bottom: 1px solid var(--border-color);
+        gap: 20px;
+        text-align: center;
+    }
+}
+@media (max-width: 480px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+}

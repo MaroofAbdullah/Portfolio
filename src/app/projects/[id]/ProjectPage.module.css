@@ -1,0 +1,250 @@
+.page {
+    padding-top: 0;
+    min-height: 100vh;
+}
+
+.hero {
+    padding: 160px 0 80px;
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 0%, var(--bg-primary) 100%);
+}
+
+.heroContent {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+}
+
+.backLink {
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    margin-bottom: 40px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: var(--transition);
+}
+
+.backLink:hover {
+    opacity: 1;
+    transform: translateX(-4px);
+}
+
+.projectIcon {
+    font-size: 4rem;
+    display: block;
+    margin-bottom: 24px;
+}
+
+.title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    letter-spacing: -2px;
+}
+
+.tagline {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.meta {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.metaItem {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.metaItem span {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.7;
+}
+
+.metaItem strong {
+    font-size: 1rem;
+}
+
+.contentSection {
+    padding: 80px 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 80px;
+}
+
+.mainCol {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.blockTitle {
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin-bottom: 24px;
+    color: var(--text-primary);
+}
+
+.description p {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.highlights {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.highlights li {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    padding-left: 28px;
+    position: relative;
+}
+
+.highlights li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--accent-2);
+    font-size: 1.2rem;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.sidebarBlock {
+    padding: 32px;
+    border-radius: 20px;
+    background: var(--bg-glass);
+    border: 1px solid var(--border-color);
+}
+
+.sidebarTitle {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.techCategories {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.techCat {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.catName {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.techTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.techTag {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+}
+
+.projectLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.nextProject {
+    padding: 80px 0 120px;
+    text-align: center;
+}
+
+.backToHome {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--accent-1);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.backToHome:hover {
+    color: var(--accent-2);
+}
+
+.notFound {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .sidebar {
+        order: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 120px;
+    }
+
+    .meta {
+        gap: 24px;
+    }
+}

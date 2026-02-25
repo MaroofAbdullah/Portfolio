@@ -1,0 +1,20 @@
+.wrapper {
+    display: inline;
+}
+
+.text {
+    color: var(--accent-1);
+    font-family: var(--font-mono);
+}
+
+.cursor {
+    color: var(--accent-1);
+    animation: blink 1s step-end infinite;
+    font-weight: 300;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
